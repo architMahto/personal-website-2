@@ -1,22 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="personalApp">
   <head>
     <meta charset="utf-8">
     <title>Archit Mahto</title>
 
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="/bower_components/Materialize/dist/css/materialize.css">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- Materialize -->
     <script src="/bower_components/Materialize/dist/js/materialize.js"></script>
     <!-- Angular -->
-    <script src="/bower_components/angular/angular.js">
+    <script src="/bower_components/angular/angular.js"></script>
+    <!-- Angular Materialize -->
+    <script src="/bower_components/angular-materialize/src/angular-materialize.js">
 
     </script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <nav class="blue-grey darken-4">
+      <!-- <ul class="right hide-on-med-and-down">
+        <li><a href="#!">First Sidebar Link</a></li>
+        <li><a href="#!">Second Sidebar Link</a></li>
+      </ul> -->
+      <ul id="slide-out" class="side-nav fixed blue-grey darken-4 white-text">
+        <h1 class="center-align">Archit Mahto</h1>
+        <li><a href="#!" class="white-text">First Sidebar Link</a></li>
+        <li><a href="#!">Second Sidebar Link</a></li>
+      </ul>
+
+      <a href="#" class="button-collapse" data-activates="slide-out" data-sidenav="left" data-menuwidth="300" data-closeonclick="true">
+          <!-- Show side-nav -->
+          <i class="material-icons">menu</i>
+      </a>
+    </nav>
+
+    <!-- <div class="parallax-container">
+      <div parallax><img src="/images/background-image-2.jpg"></div>
+    </div> -->
+    <h1 class="center-align">Archit Mahto</h1>
+
+    <!-- PersonaApp -->
+    <script type="text/javascript" src="/javascripts/app.js">  </script>
   </body>
 </html>
