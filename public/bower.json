@@ -1,0 +1,22 @@
+{
+  "name": "personal-website-2",
+  "authors": [
+    "architMahto <architmahto@cmail.carleton.ca>"
+  ],
+  "description": "New Personal website",
+  "main": "server.js",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "jquery": "^3.0.0",
+    "Materialize": "materialize#^0.97.6"
+  }
+}
