@@ -17,35 +17,82 @@
     <script src="/bower_components/Materialize/dist/js/materialize.js"></script>
     <!-- Angular -->
     <script src="/bower_components/angular/angular.js"></script>
+    <!-- Angular UI Router -->
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js">
+
+    </script>
     <!-- Angular Materialize -->
     <script src="/bower_components/angular-materialize/src/angular-materialize.js">
 
     </script>
   </head>
   <body>
+
     <nav class="blue-grey darken-4">
-      <!-- <ul class="right hide-on-med-and-down">
-        <li><a href="#!">First Sidebar Link</a></li>
-        <li><a href="#!">Second Sidebar Link</a></li>
-      </ul> -->
-      <ul id="slide-out" class="side-nav fixed blue-grey darken-4 white-text">
-        <h1 class="center-align">Archit Mahto</h1>
-        <li><a href="#!" class="white-text">First Sidebar Link</a></li>
-        <li><a href="#!">Second Sidebar Link</a></li>
+      <ul id="slide-out" class="side-nav blue-grey darken-4 white-text">
+        <!-- <h1 class="center-align">Archit Mahto</h1> -->
+        <div class="image-holder">
+          <img src="/images/archit-mahto.jpg" height="150px" width="150px" style="top: 20%; left: 45%; transform: translate(45%, 20%); border-radius: 75px; margin-bottom: 20px;"/>
+        </div>
+
+        <li>
+          <a ui-sref="home" class="white-text">
+            <i class="material-icons">home</i> Home
+          </a>
+        </li>
+        <li>
+          <a ui-sref="projects" class="white-text">
+            <i class="material-icons">assignment</i> Projects
+          </a>
+        </li>
+        <li>
+          <a ui-sref="projects" class="white-text">
+            <i class="material-icons">keyboard</i> Technical Skills
+          </a>
+        </li>
+        <li>
+          <a ui-sref="projects" class="white-text">
+            <i class="material-icons">accessibility</i> Soft Skills
+          </a>
+        </li>
+        <li>
+          <a ui-sref="projects" class="white-text">
+            <i class="material-icons">work</i> History
+          </a>
+        </li>
+        <li>
+          <a ui-sref="projects" class="white-text">
+            <i class="material-icons">school</i> Education
+          </a>
+        </li>
+        <li>
+          <a ui-sref="projects" class="white-text">
+            <i class="material-icons">star</i> Achievements
+          </a>
+        </li>
       </ul>
 
-      <a href="#" class="button-collapse" data-activates="slide-out" data-sidenav="left" data-menuwidth="300" data-closeonclick="true">
+      <a href="#" class="button-collapse show-on-large" data-activates="slide-out" data-sidenav="left" data-menuwidth="300" data-closeonclick="true">
           <!-- Show side-nav -->
-          <i class="material-icons">menu</i>
+          <i class="material-icons" style="margin-left:40px;">menu</i>
       </a>
     </nav>
 
-    <!-- <div class="parallax-container">
-      <div parallax><img src="/images/background-image-2.jpg"></div>
-    </div> -->
-    <h1 class="center-align">Archit Mahto</h1>
+    <!-- <div class="container"> -->
+      <!-- <div class="parallax-container">
+        <div class="parallax">
+          <img src="/images/background-image-2.jpg">
+        </div>
+      </div> -->
+
+
+
+      <div ui-view></div>
+    <!-- </div> -->
 
     <!-- PersonaApp -->
     <script type="text/javascript" src="/javascripts/app.js">  </script>
+    <!-- Controllers -->
+    <!-- <script type="text/javascript" src="/javascripts/controllers/navController.js"></script> -->
   </body>
 </html>
