@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="/bower_components/Materialize/dist/css/materialize.css">
     <!-- Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome Glyphicons  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Hover CSS -->
+    <link rel="stylesheet" href="/bower_components/hover/css/hover.css">
 
     <!-- jQuery -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -26,48 +30,40 @@
 
     </script>
   </head>
-  <body>
+  <body ng-controller="navController as navCtrl">
 
-    <nav class="blue-grey darken-4">
-      <ul id="slide-out" class="side-nav blue-grey darken-4 white-text">
+    <nav class="light-green darken-1">
+      <ul class="right hide-on-med-and-down">
+        <li ng-repeat="site in navCtrl.socialMedisSites">
+          <a href="{{site.link}}" target="_blank">
+            <i class="{{site.iconClass}}" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul id="slide-out" class="side-nav light-green darken-1 white-text">
         <!-- <h1 class="center-align">Archit Mahto</h1> -->
-        <div class="image-holder">
-          <img src="/images/archit-mahto.jpg" height="150px" width="150px" style="top: 20%; left: 45%; transform: translate(45%, 20%); border-radius: 75px; margin-bottom: 20px;"/>
+        <div class="row image-holder">
+          <img src="/images/archit-mahto.jpg" height="150px" width="150px" class="circle" style="top: 20%; left: 45%; transform: translate(45%, 20%);margin-bottom: 20px;"/>
         </div>
 
-        <li>
-          <a ui-sref="home" class="white-text">
-            <i class="material-icons">home</i> Home
-          </a>
-        </li>
-        <li>
-          <a ui-sref="projects" class="white-text">
-            <i class="material-icons">assignment</i> Projects
-          </a>
-        </li>
-        <li>
-          <a ui-sref="projects" class="white-text">
-            <i class="material-icons">keyboard</i> Technical Skills
-          </a>
-        </li>
-        <li>
-          <a ui-sref="projects" class="white-text">
-            <i class="material-icons">accessibility</i> Soft Skills
-          </a>
-        </li>
-        <li>
-          <a ui-sref="projects" class="white-text">
-            <i class="material-icons">work</i> History
-          </a>
-        </li>
-        <li>
-          <a ui-sref="projects" class="white-text">
-            <i class="material-icons">school</i> Education
-          </a>
-        </li>
-        <li>
-          <a ui-sref="projects" class="white-text">
-            <i class="material-icons">star</i> Achievements
+        <div class="row">
+          <h3 class="center-align">Archit Mahto</h3>
+        </div>
+
+        <div class="row">
+          <ul class="center-align social-media-icons">
+            <li ng-repeat="site in navCtrl.socialMedisSites">
+              <a href="{{site.link}}" class="white-text" target="_blank">
+                <i class="{{site.iconClass}}" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <li ng-repeat="link in navCtrl.links">
+          <a ui-sref="{{link.stateRef}}" class="white-text">
+            <i class="material-icons">{{link.icon}}</i> {{link.name}}
           </a>
         </li>
       </ul>
@@ -78,21 +74,11 @@
       </a>
     </nav>
 
-    <!-- <div class="container"> -->
-      <!-- <div class="parallax-container">
-        <div class="parallax">
-          <img src="/images/background-image-2.jpg">
-        </div>
-      </div> -->
-
-
-
-      <div ui-view></div>
-    <!-- </div> -->
+    <div ui-view></div>
 
     <!-- PersonaApp -->
     <script type="text/javascript" src="/javascripts/app.js">  </script>
     <!-- Controllers -->
-    <!-- <script type="text/javascript" src="/javascripts/controllers/navController.js"></script> -->
+    <script type="text/javascript" src="/javascripts/controllers/navController.js"></script>
   </body>
 </html>

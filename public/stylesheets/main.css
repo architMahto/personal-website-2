@@ -3,6 +3,10 @@
   background-size: cover;
 }*/
 
-nav i.material-icons {
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+  display: inline-block !important;
+}
+
+.social-media-icons li {
   display: inline-block;
 }

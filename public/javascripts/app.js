@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('personalApp', ['ui.materialize', 'ui.router'])
+  angular.module('personalApp', ['ui.materialize', 'ui.router', 'navControllers'])
     .config(routerConfig)
 
   routerConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
