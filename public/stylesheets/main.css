@@ -14,3 +14,12 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
 span {
   font-weight: bold;
 }
+
+.tech {
+  margin-top: 0px;
+}
+
+.chip {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}

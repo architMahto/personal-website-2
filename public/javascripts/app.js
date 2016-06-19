@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('personalApp', ['ui.materialize', 'ui.router', 'ngSanitize', 'navControllers', 'homeControllers'])
+  angular.module('personalApp', ['ui.materialize', 'ui.router', 'ngSanitize', 'navControllers', 'homeControllers', 'projectsControllers'])
     .config(routerConfig)
 
   routerConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
@@ -16,7 +16,8 @@
       })
       .state('projects', {
         url: '/projects',
-        templateUrl: 'views/projects.html'
+        templateUrl: 'views/projects.html',
+        controller: 'projectsController as projectsCtrl'
       })
       .state('technical-skills', {
         url: '/technical-skills',
