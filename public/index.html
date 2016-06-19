@@ -23,10 +23,12 @@
     <script src="/bower_components/angular/angular.js"></script>
     <!-- Angular UI Router -->
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js">
-
     </script>
     <!-- Angular Materialize -->
     <script src="/bower_components/angular-materialize/src/angular-materialize.js">
+    </script>
+    <!-- Angular Sanitize -->
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js">
 
     </script>
   </head>
@@ -37,6 +39,12 @@
         <li ng-repeat="site in navCtrl.socialMedisSites">
           <a href="{{site.link}}" target="_blank">
             <i class="{{site.iconClass}}" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#demoModal" class="white-text">
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
@@ -58,6 +66,12 @@
                 <i class="{{site.iconClass}}" aria-hidden="true"></i>
               </a>
             </li>
+
+            <li>
+              <a href="#demoModal" class="white-text">
+                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -74,11 +88,22 @@
       </a>
     </nav>
 
+    <div id="demoModal" class="modal">
+      <div class="modal-content">
+          <h4>Modal header</h4>
+          <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+
     <div ui-view></div>
 
     <!-- PersonaApp -->
     <script type="text/javascript" src="/javascripts/app.js">  </script>
     <!-- Controllers -->
     <script type="text/javascript" src="/javascripts/controllers/navController.js"></script>
+    <script type="text/javascript" src="/javascripts/controllers/homeController.js"></script>
   </body>
 </html>

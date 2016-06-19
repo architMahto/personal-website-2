@@ -67,11 +67,12 @@
       {
         iconClass: "fa fa-stack-overflow fa-2x",
         link: "https://careers.stackoverflow.com/architmahto"
-      },
-      {
-        iconClass: "fa fa-envelope fa-2x",
-        link: "mailto:architmahto@gmail.com"
       }
+      // {
+      //   iconClass: "fa fa-envelope fa-2x",
+      //   // link: "mailto:architmahto@gmail.com"
+      //   link: "#demoModal"
+      // }
     ]
   }
 }());

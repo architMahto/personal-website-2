@@ -10,3 +10,7 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
 .social-media-icons li {
   display: inline-block;
 }
+
+span {
+  font-weight: bold;
+}

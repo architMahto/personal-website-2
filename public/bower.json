@@ -20,6 +20,7 @@
     "Materialize": "materialize#^0.97.6",
     "angular-materialize": "^0.1.8",
     "angular-ui-router": "^0.3.1",
-    "hover": "Hover#^2.0.2"
+    "hover": "Hover#^2.0.2",
+    "angular-sanitize": "^1.5.7"
   }
 }
