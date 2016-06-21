@@ -21,14 +21,9 @@
         icon: "code"
       },
       {
-        name: "Technical Skills",
-        stateRef: "technical-skills",
+        name: "Skills",
+        stateRef: "skills",
         icon: "keyboard"
-      },
-      {
-        name: "Soft Skills",
-        stateRef: "soft-skills",
-        icon: "accessibility"
       },
       {
         name: "History",
