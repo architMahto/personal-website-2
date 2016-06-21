@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('personalApp', ['ui.materialize', 'ui.router', 'ngSanitize', 'navControllers', 'homeControllers', 'projectsControllers', 'skillsControllers'])
+  angular.module('personalApp', ['ui.materialize', 'ui.router', 'ngSanitize', 'angular-timeline', 'navControllers', 'homeControllers', 'projectsControllers', 'skillsControllers', 'historyControllers'])
     .config(routerConfig)
 
   routerConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
@@ -26,7 +26,8 @@
       })
       .state('history', {
         url: '/history',
-        templateUrl: 'views/history.html'
+        templateUrl: 'views/history.html',
+        controller: 'historyController as historyCtrl'
       })
       .state('education', {
         url: '/education',

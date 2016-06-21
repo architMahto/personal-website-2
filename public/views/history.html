@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="row">
+    <h3 class="center-align light-green-text">History</h3>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s6">
+          <a class="tab-link light-green-text" ng-click="historyCtrl.switchTabs()">
+            <i class="material-icons">build</i> Work History
+          </a>
+        </li>
+        <li class="tab col s6">
+          <a class="tab-link light-green-text" ng-click="historyCtrl.switchTabs()">
+            <i class="material-icons">accessibility</i> Volunteering History
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row" ng-show="historyCtrl.workHistoryArea">
+    <div class="col s12">
+      <timeline>
+        <timeline-event ng-repeat="event in historyCtrl.workHistory" side="alternate">
+          <timeline-badge class="{{event.badgeClass}}">
+            <!-- <i class="glyphicon {{event.badgeIconClass}}"></i> -->
+          </timeline-badge>
+          <timeline-panel class="{{event.badgeClass}}">
+            <timeline-heading>
+              <h4>{{event.title}}</h4>
+              <h6>{{event.timeframe}}</h6>
+              <h6>{{event.organization}}</h6>
+            </timeline-heading>
+            <p>{{event.content}}</p>
+          </timeline-panel>
+        </timeline-event>
+      </timeline>
+    </div>
+  </div>
+
+  <div class="row" ng-hide="historyCtrl.workHistoryArea">
+    <div class="col s12">
+      <timeline>
+        <timeline-event ng-repeat="event in historyCtrl.voluteeringHistory" side="alternate">
+          <timeline-badge class="{{event.badgeClass}}">
+            <!-- <i class="glyphicon {{event.badgeIconClass}}"></i> -->
+          </timeline-badge>
+          <timeline-panel class="{{event.badgeClass}}">
+            <timeline-heading>
+              <h4>{{event.title}}</h4>
+              <h6>{{event.timeframe}}</h6>
+              <h6>{{event.organization}}</h6>
+            </timeline-heading>
+            <p>{{event.content}}</p>
+          </timeline-panel>
+        </timeline-event>
+      </timeline>
+    </div>
+  </div>
+</div>
